@@ -6,13 +6,13 @@ class HaedoSidebar extends HTMLElement {
         for (var i = 0; i < this.getAttributeNames().length; i++) {
             Attributes[this.getAttributeNames()[i]] = this.getAttribute(this.getAttributeNames()[i]);
         }
-
-        let elementTemp;
-        let styleTemp;
+        // 초기화
+        let elementTemp = ``;
+        let styleTemp = ``;
         // ------- Finish Lock --------
 
         // 엘리멘트 처리부
-        for (var i = 0; Attributes.menu.length; i++) {
+        for (var i = 0; i < Attributes.menu.length; i++) {
             console.log(Attributes.menu[i]);
         }
 
