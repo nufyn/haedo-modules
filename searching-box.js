@@ -6,23 +6,7 @@ class HaedoSearchingBox extends HTMLElement {
         for (var i = 0; i < this.getAttributeNames().length; i++) {
             Attributes[this.getAttributeNames()[i]] = this.getAttribute(this.getAttributeNames()[i]);
         }
-        // 초기화
-        let elementTemp = ``;
-        let styleTemp = ``;
-        // ------- Finish Lock --------
-
-        // 엘리멘트 처리부
-        elementTemp = `
-        <input type='text'>
-        <button>search</button>
-        `
-
-        //스타일 처리부
-        styleTemp = ``;
-
-
-        // ------- Start Lock --------
-        this.setModule(elementTemp, styleTemp);
+        this.setModule(this.setElement(), this.setStyle());
         this.setEvent();
         // ------- Finish Lock --------
     }
@@ -33,7 +17,17 @@ class HaedoSearchingBox extends HTMLElement {
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = thisModule;
     }
-
+    // Element 처리부
+    setElement() {
+        return `
+            <input type = 'text' >
+            <button>search</button>
+        `;
+    }
+    // Style 처리부
+    setStyle() {
+        return ``;
+    }
     // Event 처리부
     setEvent() {
         this.shadowRoot.querySelector('button').addEventListener('click', () => {
