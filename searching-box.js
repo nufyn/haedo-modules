@@ -1,4 +1,4 @@
-class HaedoSidebar extends HTMLElement {
+class HaedoSearchingBox extends HTMLElement {
     connectedCallback() {
         // ------- Start Lock --------
         // Element 태그의 속성 값 JSON 만들기
@@ -12,10 +12,10 @@ class HaedoSidebar extends HTMLElement {
         // ------- Finish Lock --------
 
         // 엘리멘트 처리부
-        for (var i = 0; i < Attributes.menu.length; i++) {
-            console.log(Attributes.menu[i]);
-        }
-
+        elementTemp = `
+        <input type='text'>
+        <button>search</button>
+        `
 
         //스타일 처리부
         styleTemp = ``;
@@ -23,6 +23,7 @@ class HaedoSidebar extends HTMLElement {
 
         // ------- Start Lock --------
         this.setModule(elementTemp, styleTemp);
+        this.setEvent();
         // ------- Finish Lock --------
     }
     setModule(moduleElement, moduleStyle) {
@@ -32,5 +33,15 @@ class HaedoSidebar extends HTMLElement {
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = thisModule;
     }
+
+    // Event 처리부
+    setEvent() {
+        this.shadowRoot.querySelector('button').addEventListener('click', () => {
+            alert("test")
+        })
+    }
 }
-customElements.define('haedo-sidebar', HaedoSidebar);
+customElements.define('haedo-searching-box', HaedoSearchingBox);
+
+
+
