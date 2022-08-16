@@ -142,6 +142,7 @@ $RECYCLE.BIN/
 *.msp
 # Windows shortcuts
 *.lnk
+
 bin
 public/uploads
 .env
