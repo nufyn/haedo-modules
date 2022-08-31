@@ -6,7 +6,7 @@ class HaedoSearchingBox extends HTMLElement {
         for (var i = 0; i < this.getAttributeNames().length; i++) {
             Attributes[this.getAttributeNames()[i]] = this.getAttribute(this.getAttributeNames()[i]);
         }
-        this.setModule(this.setElement(), this.setStyle());
+        this.setModule(this.setElement(Attributes), this.setStyle());
         this.setEvent();
         // ------- Finish Lock --------
     }
@@ -18,7 +18,8 @@ class HaedoSearchingBox extends HTMLElement {
         this.shadowRoot.innerHTML = thisModule;
     }
     // Element 처리부
-    setElement() {
+    setElement(params) {
+        console.log(params)
         return `
             <input type = 'text' >
             <button>search</button>
