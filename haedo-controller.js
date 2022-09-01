@@ -23,6 +23,7 @@ module.exports = {
      */
     signin(req, res) {
         const saltRounds = 10;
+        console.log("req.body", req.body)
 
         /**
          * id, pw 값은 필수입니다
