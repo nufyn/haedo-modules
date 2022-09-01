@@ -9,10 +9,12 @@ class Haedo {
     login(id, pw, redirect_url = "/") {
         $.ajax({
             // 파라미터로 받는게 좋을까 우리 모듈에서 무조건 지정하는 것이 좋을까
-            url: '/apis/v1/',
+            url: '/apis/v1/login',
             type: 'POST',
             dataType: 'json',
             data: {
+                id: id,
+                pw: pw
             },
             success: (res) => {
                 // set cookie 등 로그인 완료 세팅
