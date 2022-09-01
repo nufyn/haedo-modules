@@ -33,6 +33,11 @@ module.exports = {
             const data = [req.body.id];
             connection.query(sql, data, (err, results) => {
                 console.log("results", results)
+                //JSON.parse를 이용해 jsontext를 파싱해 contact 변수에 넣어준다. 	
+                var results = JSON.parse(results);
+                console.log("results", results)
+
+
                 if (results[0].cnt == 0) {
                     bcrypt.hash(req.body.pw, saltRounds, function (err, hash) {
                         req.body.pw = hash;
