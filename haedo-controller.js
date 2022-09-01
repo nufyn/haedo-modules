@@ -24,7 +24,9 @@ module.exports = {
     signin(req, res) {
         const saltRounds = 10;
         console.log("req.body", req.body)
-
+        //JSON.parse를 이용해 jsontext를 파싱해 contact 변수에 넣어준다. 	        
+        var body = JSON.parse(req.body);
+        console.log("body", body)
         /**
          * id, pw 값은 필수입니다
          */
@@ -33,11 +35,10 @@ module.exports = {
             const data = [req.body.id];
             connection.query(sql, data, (err, results) => {
                 console.log("results", results)
-                //JSON.parse를 이용해 jsontext를 파싱해 contact 변수에 넣어준다. 	
-                var results = JSON.parse(results);
-                console.log("results", results)
-
-
+                res.json({
+                    tmp: "tmp"
+                })
+                return;
                 if (results[0].cnt == 0) {
                     bcrypt.hash(req.body.pw, saltRounds, function (err, hash) {
                         req.body.pw = hash;
@@ -46,13 +47,13 @@ module.exports = {
                          */
                         let data = []
                         let sql = `INSERT INTO Users(`;
-                        for (var i = 0; i < req.body.length; i++) {
+                        for (var i = 0; i < body.length; i++) {
                             sql += `?,`;
                         }
                         sql = sql.slice(0, -1) + `) VALUES (`;
-                        for (var i = 0; i < req.body.length; i++) {
+                        for (var i = 0; i < body.length; i++) {
                             sql += `?,`;
-                            data.push(req.body[i])
+                            data.push(body[i])
                         }
                         sql = sql.slice(0, -1) + `);`
 
