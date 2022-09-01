@@ -32,7 +32,7 @@ module.exports = {
             const data = [req.body.id];
             connection.query(sql, data, (err, results) => {
                 console.log("results", results)
-                if (results[0].cnt != 0) {
+                if (results[0].cnt != '0') {
                     bcrypt.hash(req.body.pw, saltRounds, function (err, hash) {
                         req.body.pw = hash;
                         /**
@@ -85,6 +85,8 @@ module.exports = {
                             }
                         })
                     })
+                } else {
+
                 }
             })
         })
