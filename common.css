@@ -52,14 +52,20 @@
     --color_disabled: rgba(153, 153, 153, 1);
 }
 
-* {
+*:not(head, script) {
     box-sizing: border-box;
     color: inherit;
     font: inherit;
-    margin: 0;
+    background-color: transparent;
     padding: 0;
+    margin: 0;
+    border: none;
+    outline: 0;
+    text-decoration: 0;
+    list-style: none;
     cursor: default;
     -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
 }
 
 html,
@@ -68,7 +74,6 @@ body {
 }
 
 body {
-    display: block;
     width: 100%;
     line-height: 1.35;
     -webkit-text-size-adjust: none;
@@ -81,7 +86,16 @@ body::-webkit-scrollbar {
 
 .wrapper {
     display: flex;
+    height: 100%;
     flex-direction: column;
+}
+
+main.container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 56px 80px;
 }
 
 main {
@@ -184,4 +198,8 @@ h1 {
 table {
     border-collapse: collapse;
     border-spacing: 0
+}
+
+i {
+    display: inline-block;
 }
