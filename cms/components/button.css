@@ -35,8 +35,14 @@ button {
 
 .flex-button {
     display: flex;
-
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
 }
+
+.icon-button i {}
 
 .small-button {
     width: auto;

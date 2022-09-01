@@ -75,38 +75,6 @@
     align-items: flex-end;
 }
 
-.gap-1 {
-    gap: 1rem;
-}
-
-.gap-2 {
-    gap: 2rem;
-}
-
-.gap-3 {
-    gap: 3rem;
-}
-
-.gap-xs {
-    gap: 0.5rem;
-}
-
-.gap-sm {
-    gap: 0.75rem;
-}
-
-.gap-md {
-    gap: 1rem;
-}
-
-.gap-lg {
-    gap: 1.25rem;
-}
-
-.gap-xl {
-    gap: 1.5rem;
-}
-
 .gap-v.xs {
     row-gap: 0.5rem;
 }
