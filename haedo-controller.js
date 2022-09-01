@@ -46,7 +46,7 @@ module.exports = {
                             res.json({
                                 // Nufyn Error Code. 아래 에러코드를 참고해주세요.
                                 "status": {
-                                    "status_code": 501,
+                                    "status_code": 601,
                                     "status_msg": "Login 에러입니다.",
                                     "status_err": ERROR
                                 },
@@ -55,6 +55,17 @@ module.exports = {
                             })
                         }
                     });
+                } else {
+                    res.json({
+                        // Nufyn Error Code. 아래 에러코드를 참고해주세요.
+                        "status": {
+                            "status_code": 602,
+                            "status_msg": "User가 없습니다.",
+                            "status_err": ERROR
+                        },
+                        // API처리 결과 반환은 아래 results 변수에 담아주세요.
+                        "results": null
+                    })
                 }
             })
         })
