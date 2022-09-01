@@ -48,7 +48,7 @@ module.exports = {
                                 "status": {
                                     "status_code": 601,
                                     "status_msg": "Login 에러입니다.",
-                                    "status_err": ERROR
+                                    "status_err": err
                                 },
                                 // API처리 결과 반환은 아래 results 변수에 담아주세요.
                                 "results": null
@@ -61,7 +61,7 @@ module.exports = {
                         "status": {
                             "status_code": 602,
                             "status_msg": "User가 없습니다.",
-                            "status_err": ERROR
+                            "status_err": err
                         },
                         // API처리 결과 반환은 아래 results 변수에 담아주세요.
                         "results": null
