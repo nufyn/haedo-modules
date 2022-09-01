@@ -32,7 +32,7 @@ module.exports = {
             const data = [req.body.id];
             connection.query(sql, data, (err, results) => {
                 console.log("results", results)
-                if (results[0].cnt != '0') {
+                if (results[0].cnt == 0) {
                     bcrypt.hash(req.body.pw, saltRounds, function (err, hash) {
                         req.body.pw = hash;
                         /**
@@ -86,7 +86,19 @@ module.exports = {
                         })
                     })
                 } else {
-
+                    res.json(
+                        //Response - 604
+                        {
+                            // Nufyn Error Code. 아래 에러코드를 참고해주세요.
+                            "status": {
+                                "status_code": 604,
+                                "status_msg": "유저가 존재합니다",
+                                "status_err": null
+                            },
+                            // API처리 결과 반환은 아래 results 변수에 담아주세요.
+                            "results": null
+                        }
+                    )
                 }
             })
         })
