@@ -1,3 +1,8 @@
+/**
+ * Haedo Front Modules
+ * 
+ * JQuery import 필수
+ */
 class Haedo {
     /**
      * 기능 설명
