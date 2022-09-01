@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const controller = require('./controller');
+const controller = require('./haedo-controller');
 
-router.get('/', controller.tempFunction);
+router.get('/', controller.login);
 
 
 module.exports = router;

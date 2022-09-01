@@ -14,36 +14,23 @@ module.exports = {
      * @param {*} req 
      * @param {*} res 
      */
-    tempFunction(req, res) {
+    login(req, res) {
         pool.getConnection((err, connection) => {
-            const sql = `SELECT * FROM Accidents;`
+            const sql = `SELECT * FROM Users;`
             const data = []
             connection.query(sql, data, (err, results) => {
                 console.log("results", results)
+                res.json({
+                    // Nufyn Error Code. 아래 에러코드를 참고해주세요.
+                    "status": {
+                        "status_code": 200,
+                        "status_msg": null,
+                        "status_err": null
+                    },
+                    // API처리 결과 반환은 아래 results 변수에 담아주세요.
+                    "results": results
+                })
             })
-        })
-        res.json({
-            // Nufyn Error Code. 아래 에러코드를 참고해주세요.
-            "status": {
-                "status_code": 200,
-                "status_msg": null,
-                "status_err": null
-            },
-            // API처리 결과 반환은 아래 results 변수에 담아주세요.
-            "results": {
-                "accidents": [{
-                    "title": "홍길동",
-                    "code": "rlfehd12!@",
-                    "ddd_date": "2022-08-15",
-                    "participants": 26515,
-                    "opinions": 12442,
-                    "hot_comment": {
-                        "user_image_path": "/uploads/...",
-                        "comment": "",
-                        "likes": "1.2k"
-                    }
-                }]
-            }
         })
     }
 }
