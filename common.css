@@ -1,4 +1,15 @@
 :root {
+    /* Break point */
+    /* 
+        Mobile: 360 x 640.
+        Mobile: 375 x 667.
+        Mobile: 360 x 720.
+        iPhone X: 375 x 812.
+        Pixel 2: 411 x 731.
+        Tablet: 768 x 1024.
+        Laptop: 1366 x 768.
+        High-res laptop or desktop: 1920 x 1080.
+     */
     /* 서비스 특성에 맞게 변경해서 사용*/
     /* 
         The point color
@@ -202,4 +213,94 @@ table {
 
 i {
     display: inline-block;
+}
+
+.responsive-wearable {
+    display: inherit;
+}
+
+.responsive-mobile {
+    display: none;
+}
+
+.responsive-tablet {
+    display: none;
+}
+
+.responsive-desktop {
+    display: none;
+}
+
+/* mobile  */
+@media all and (min-width: 280px) and (max-width:359px) {
+    .responsive-wearable {
+        display: inherit;
+    }
+}
+
+@media all and (min-width: 360px) {
+    .responsive-wearable {
+        display: none;
+    }
+}
+
+@media all and (min-width: 320px) and (max-width:767px) {
+    .responsive-mobile {
+        display: inherit;
+    }
+
+    .responsive-tablet {
+        display: none;
+    }
+
+    .responsive-desktop {
+        display: none;
+    }
+}
+
+/* mobile large & tablet */
+@media all and (min-width: 768px) and (max-width:1023px) {
+    .responsive-mobile {
+        display: none;
+    }
+
+    .responsive-tablet {
+        display: inherit;
+    }
+
+    .responsive-desktop {
+        display: none;
+    }
+}
+
+/* laptop */
+@media all and (min-width: 1024px) and (max-width:1365px) {
+    .responsive-mobile {
+        display: none;
+    }
+
+
+    .responsive-tablet {
+        display: inherit;
+    }
+
+    .responsive-desktop {
+        display: inherit;
+    }
+}
+
+/* desktop */
+@media all and (min-width: 1366px) and (max-width:1920px) {
+    .responsive-mobile {
+        display: none;
+    }
+
+
+    .responsive-tablet {
+        display: none;
+    }
+
+    .responsive-desktop {
+        display: inherit;
+    }
 }

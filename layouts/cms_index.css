@@ -1,0 +1,260 @@
+/**
+css selector naming
+    1. class= 어디에(section, box, parent...)-무엇을(element, item, component, child...)__어떻게(속성)
+    2. id= 동사(어떤 기능을 한다)-명사(누가, 무엇을)
+*/
+
+@font-face {
+    font-family: 'Pretendard Variable';
+    font-weight: 200 900;
+    font-style: normal;
+    font-display: swap;
+    src: local('Pretendard Variable'),
+        url('/public/fonts/PretendardVariable.woff2') format('woff2-variations'),
+        url('/public/fonts/PretendardVariable.woff2') format('truetype');
+}
+
+* {
+    word-break: break-all;
+    font-family: 'Pretendard Variable', sans-serif !important;
+}
+
+.cms-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    line-height: 1.35;
+    -webkit-text-size-adjust: none;
+    overflow: hidden;
+}
+
+.wrapper ::-webkit-scrollbar {
+    display: none;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 0.5rem;
+    height: 3.75rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.header-open-sidenav {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    font-size: 0;
+}
+
+.ic-sidenav__open {
+    background-image: url("/public/images/icon/ic_dashboard.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-brand-logo {
+    width: auto;
+    height: 1.75rem;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0;
+}
+
+.header-logo-image {
+    display: block;
+    width: auto;
+    height: 100%;
+}
+
+.header-logout-button {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    height: 1.75rem;
+    vertical-align: middle;
+    background-color: #f5f6f8;
+    border-radius: 3.125rem;
+    padding: 0.5rem 1.125rem;
+}
+
+.cms-main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.sidenav-wrapper {
+    padding-top: 1rem;
+    max-width: 11.25rem;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f6f8;
+}
+
+.sidenav-link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    column-gap: 0.5rem;
+    height: 3.25rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.sidenav-link::after {
+    content: attr(data-name);
+    font-size: 0.875rem;
+    line-height: 1rem;
+    align-self: center;
+}
+
+.sidenav-icon {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 0;
+    cursor: alias;
+}
+
+.ic-dashboard {
+    background-image: url("/public/images/icon/ic_dashboard.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ic-user {
+    background-image: url("/public/images/icon/ic_user.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ic-partners {
+    background-image: url("/public/images/icon/ic_shop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ic-plant {
+    background-image: url("/public/images/icon/ic_plant.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ic-sample {
+    background-image: url("/public/images/icon/ic_sample.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ic-list {
+    background-image: url("/public/images/icon/ic_list.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ic-payment {
+    background-image: url("/public/images/icon/ic_payment.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ic-consulting {
+    background-image: url("/public/images/icon/ic_report.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ic-banner {
+    background-image: url("/public/images/icon/ic_advertising.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ic-edit {
+    background-image: url("/public/images/icon/ic_edit.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contents-wrapper {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 60px);
+    padding-top: 3.375rem;
+    padding-bottom: 1rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.contents-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.contents-title {
+    font-size: 2.125rem;
+    line-height: 1;
+}
+
+@media screen and (max-width:1365px) {
+
+    /* 태블릿 가로 */
+    .contents-wrapper {
+        padding-top: 3.375rem;
+        padding-bottom: 1rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+
+    /* 모바일 가로 */
+    .sidenav-wrapper {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        max-width: 100%;
+        transition: left 0.5s ease-out;
+    }
+
+    .sidenav-link:nth-child(1) {
+        animation-name: sequential-fadein;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+    }
+
+    .contents-wrapper {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+@keyframes sequential-fadein {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
