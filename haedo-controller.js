@@ -19,55 +19,84 @@ const pool = require("../../../../config/dbconfig");
 
 module.exports = {
     /**
-     * Function Router
+     * Signin Router
      * @param {*} req 
      * @param {*} res 
      */
-    login(req, res) {
+    signin(req, res) {
+        const saltRounds = 10;
+
+        /**
+         * id, pw 값은 필수입니다
+         */
         pool.getConnection((err, connection) => {
-            const sql = `SELECT id, pw FROM Users WHERE id=?;`;
+            const sql = `SELECT COUNT(*) cnt FROM Users WHERE id=?;`;
             const data = [req.body.id];
             connection.query(sql, data, (err, results) => {
                 console.log("results", results)
-                if (results.length != 0) {
-                    bcrypt.compare(req.body.pw, results[0].pw, function (err, pwd_confirm) {
-                        if (pwd_confirm) {
-                            res.json({
-                                // Nufyn Error Code. 아래 에러코드를 참고해주세요.
-                                "status": {
-                                    "status_code": 200,
-                                    "status_msg": null,
-                                    "status_err": null
-                                },
-                                // API처리 결과 반환은 아래 results 변수에 담아주세요.
-                                "results": results
-                            })
-                        } else {
-                            res.json({
-                                // Nufyn Error Code. 아래 에러코드를 참고해주세요.
-                                "status": {
-                                    "status_code": 601,
-                                    "status_msg": "Login 에러입니다.",
-                                    "status_err": err
-                                },
-                                // API처리 결과 반환은 아래 results 변수에 담아주세요.
-                                "results": null
-                            })
+                if (results[0].cnt != 0) {
+                    bcrypt.hash(req.body.pw, saltRounds, function (err, hash) {
+                        req.body.pw = hash;
+                        /**
+                         * req.body로 전달되는 컬럼을 자동으로 insert 합니다
+                         */
+                        let data = []
+                        let sql = `INSERT INTO Users(`;
+                        for (var i = 0; i < req.body.length; i++) {
+                            sql += `?,`;
                         }
-                    });
-                } else {
-                    res.json({
-                        // Nufyn Error Code. 아래 에러코드를 참고해주세요.
-                        "status": {
-                            "status_code": 602,
-                            "status_msg": "User가 없습니다.",
-                            "status_err": err
-                        },
-                        // API처리 결과 반환은 아래 results 변수에 담아주세요.
-                        "results": null
+                        sql = sql.slice(0, -1) + `) VALUES (`;
+                        for (var i = 0; i < req.body.length; i++) {
+                            sql += `?,`;
+                            data.push(req.body[i])
+                        }
+                        sql = sql.slice(0, -1) + `);`
+
+                        connection.query(sql, data, (err, results) => {
+                            console.log(sql);
+                            console.log(data);
+
+                            if (results) {
+                                console.log(results);
+                                res.json(
+                                    //Response - 200
+                                    {
+                                        // Nufyn Error Code. 아래 에러코드를 참고해주세요.
+                                        "status": {
+                                            "status_code": 200,
+                                            "status_msg": null,
+                                            "status_err": null
+                                        },
+                                        // API처리 결과 반환은 아래 results 변수에 담아주세요.
+                                        "results": null
+                                    }
+                                )
+                            } else {
+                                console.log(err.sql);
+                                console.log(err.sqlMessage);
+                                res.json({
+                                    // Nufyn Error Code. 아래 에러코드를 참고해주세요.
+                                    "status": {
+                                        "status_code": 601,
+                                        "status_msg": "Signin 에러입니다.",
+                                        "status_err": err
+                                    },
+                                    // API처리 결과 반환은 아래 results 변수에 담아주세요.
+                                    "results": null
+                                })
+                            }
+                        })
                     })
                 }
             })
         })
+    },
+    /**
+     * Signout Router
+     * @param {*} req 
+     * @param {*} res 
+     */
+    signout(req, res) {
+
     }
 }
