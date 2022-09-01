@@ -2,9 +2,9 @@ class Haedo {
     /**
      * 기능 설명
      * @version 1.0 // 버전 명시
-     * @param string id // 
-     * @param string pw
-     * @param string redirect_url
+     * @param {string} id // 
+     * @param {string} pw
+     * @param {string} redirect_url
      */
     login(id, pw, redirect_url = "/") {
         $.ajax({
@@ -18,7 +18,8 @@ class Haedo {
             },
             success: (res) => {
                 // set cookie 등 로그인 완료 세팅
-                alert("로그인입니다")
+                alert("로그인입니다");
+                console.log(res);
                 // 리다이렉션
                 location.href = redirect_url;
             },
