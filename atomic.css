@@ -284,6 +284,52 @@
     padding: var(--rem_5);
 }
 
+/* padding none */
+
+.padding-top__none {
+    padding-top: 0 !important;
+}
+
+.padding-right__none {
+    padding-right: 0 !important;
+}
+
+.padding-bottom__none {
+    padding-top: 0 !important;
+}
+
+.padding-left__none {
+    padding-left: 0 !important;
+}
+
+.padding-horizontal__none {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.padding-vertical__none {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* text align */
+
+.text-align__center {
+    text-align: center;
+}
+
+.text-align__left {
+    text-align: left;
+}
+
+.text-align__right {
+    text-align: right;
+}
+
+.text-align__stretch {
+    text-align: justify;
+}
+
 /* Margin */
 
 /* all(top, right, bottom, left) margin */

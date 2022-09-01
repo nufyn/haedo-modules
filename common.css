@@ -213,6 +213,7 @@ table {
 
 i {
     display: inline-block;
+    font-size: 0;
 }
 
 .responsive-wearable {
