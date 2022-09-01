@@ -16,7 +16,7 @@ class Haedo {
             },
             success: (res) => {
                 // set cookie 등 로그인 완료 세팅
-
+                alert("로그인입니다")
                 // 리다이렉션
                 location.href = redirect_url;
             },
