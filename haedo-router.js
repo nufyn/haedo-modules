@@ -3,7 +3,7 @@ const router = express.Router();
 
 const controller = require('./haedo-controller');
 
-router.get('/', controller.login);
+router.post('/', controller.login);
 
 
 module.exports = router;
