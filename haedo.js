@@ -41,7 +41,9 @@ class Haedo {
      * @param {string} redirect_url
      */
     signin(id, pw, pw_confirm, redirect_url = "/") {
-        console.log(id, pw, pw_confirm)
+        console.log(id)
+        console.log(pw)
+        console.log(pw_confirm)
         if (pw != pw_confirm) {
             alert("비밀번호를 확인해주세요.")
             return;
