@@ -66,10 +66,10 @@ class Haedo {
                 console.log("회원가입 성공");
                 console.log(res);
                 // 리다이렉션
-                location.href = redirect_url;
+                // location.href = redirect_url;
             },
             error: (err) => {
-
+                console.log("err", err)
             }
         });
     }
