@@ -916,7 +916,7 @@
     gap: calc(3rem + var(--em_xl));
 }
 
-/* column(horizontal) gap */
+/* column(main-axis) gap */
 
 .gap-col__1.extra-small {
     column-gap: calc(1rem + var(--em_xs));
@@ -978,7 +978,7 @@
     column-gap: calc(3rem + var(--em_xl));
 }
 
-/* row(vertical) gap */
+/* row(cross-axis) gap */
 
 .gap-row__1.extra-small {
     row-gap: calc(1rem + var(--em_xs));
@@ -1038,6 +1038,48 @@
 
 .gap-row__3.extra-large {
     row-gap: calc(3rem + var(--em_xl));
+}
+
+/* order */
+
+.order__1 {
+    order: 1;
+}
+
+.order__2 {
+    order: 2;
+}
+
+.order__3 {
+    order: 3;
+}
+
+.order__4 {
+    order: 4;
+}
+
+.order__5 {
+    order: 5;
+}
+
+.order__6 {
+    order: 6;
+}
+
+.order__7 {
+    order: 7;
+}
+
+.order__8 {
+    order: 8;
+}
+
+.order__9 {
+    order: 9;
+}
+
+.order__10 {
+    order: 10;
 }
 
 /* scroll */
