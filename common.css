@@ -61,6 +61,8 @@
     --color_warning: rgba(255, 235, 59, 1);
     --color_info: rgba(33, 150, 243, 1);
     --color_disabled: rgba(153, 153, 153, 1);
+
+    --shadow: 0 3px 6px rgba(13, 13, 13, 0.16)
 }
 
 *:not(head, script) {
