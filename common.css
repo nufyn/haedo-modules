@@ -33,7 +33,7 @@
     --color_text_placeholder: rgba(153, 153, 153, 0.2);
     --color_text_disabled: rgba(203, 203, 203, 0.6);
     --color_background: rgba(0, 0, 0, 0.03);
-    --color_border: rgba(0, 0, 0, 0.2);
+    --color_border: rgb(219, 219, 219, 1);
 
     /* 가급적 변경 금지 */
     /* 
@@ -45,7 +45,7 @@
 
     --color_black: rgba(13, 13, 13, 1);
     --color_white: rgba(245, 245, 245, 1);
-    --color_gray: rgba(128, 128, 128, 1);
+    --color_gray: rgb(128, 128, 128, 1);
     --color_gray_dark: rgba(105, 105, 105, 1);
     --color_gray_light: rgba(204, 204, 204, 1);
     /*
@@ -62,7 +62,15 @@
     --color_info: rgba(33, 150, 243, 1);
     --color_disabled: rgba(153, 153, 153, 1);
 
-    --shadow: 0 3px 6px rgba(13, 13, 13, 0.16)
+    --border_1: 1px solid var(--color_border);
+    --border_2: 2px solid var(--color_border);
+    --border_3: 3px solid var(--color_border);
+    --border_primary_1: 1px solid var(--color_primary);
+    --border_primary_2: 2px solid var(--color_primary);
+    --border_primary_3: 3px solid var(--color_primary);
+
+
+    --shadow: 0 3px 6px rgba(13, 13, 13, 0.16);
 }
 
 *:not(head, script) {

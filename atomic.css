@@ -19,16 +19,35 @@
     --pixel_80: 80px;
     --pixel_90: 90px;
     --pixel_100: 100px;
+
     --rem_1: 1rem;
     --rem_2: 2rem;
     --rem_3: 3rem;
     --rem_4: 4rem;
     --rem_5: 5rem;
+
     --em_xs: -0.5em;
     --em_sm: -0.25em;
     --em_md: +0em;
     --em_lg: +0.25em;
     --em_xl: +0.5em;
+
+    --font_bolder: bolder;
+    --font_lighter: lighter;
+    --font_light: 200;
+    --font_medium: 500;
+    --font_bold: 600;
+    --font_black: 900;
+
+    --weight_100: 100;
+    --weight_200: 200;
+    --weight_300: 300;
+    --weight_400: 400;
+    --weight_500: 500;
+    --weight_600: 600;
+    --weight_700: 700;
+    --weight_800: 800;
+    --weight_900: 900;
 }
 
 /* 
