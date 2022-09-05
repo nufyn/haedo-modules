@@ -4,6 +4,35 @@ css selector naming
     2. id= 동사(어떤 기능을 한다)-명사(누가, 무엇을)
 */
 
+:root {
+    /* #4ECB71*/
+    --color_primary: rgb(78, 203, 113, 1);
+    /* --color_primary_dark: rgba(0, 0, 0, 1); */
+    /* #E4F7EA */
+    --color_primary_light: rgba(78, 203, 113, 0.15);
+    /* --color_primary_sub: rgba(78, 203, 113, 0.15); */
+    --color_action: rgba(255, 255, 0, 1);
+    --color_text_title: rgba(0, 0, 0, 1);
+    --color: #696969 --color: rgb(219, 219, 219);
+    /* #696969 */
+    --color_text_paragraph: rgba(102, 102, 102, 0.4);
+    /* #989898 */
+    --color_text_placeholder: rgba(153, 153, 153, 0.2);
+    --color_text_disabled: rgba(203, 203, 203, 0.6);
+    /* #323232 */
+    --color_background: rgba(0, 0, 0, 0.03);
+    /* #DBDBDB */
+    --color_border: rgba(219, 219, 219, 1);
+
+    /* --color_gray_dark: rgb(105, 105, 105, 1); */
+    /* #F5F6F8 */
+    --color_gray_light: rgb(245, 246, 248, 1);
+
+    --pixel_12: 12px;
+    --pixel_8: 8px;
+    --pixel_18: 18px;
+}
+
 @font-face {
     font-family: 'Pretendard Variable';
     font-weight: 200 900;
@@ -16,7 +45,7 @@ css selector naming
 
 * {
     word-break: break-all;
-    font-family: 'Pretendard Variable', sans-serif !important;
+    font-family: 'Pretendard Variable' !important;
 }
 
 .cms-wrapper {
@@ -43,7 +72,7 @@ css selector naming
     column-gap: 0.5rem;
     height: 3.75rem;
     padding: 1rem 1.25rem;
-    border-bottom: 1px solid #DBDBDB;
+    border-bottom: var(--border_1);
 }
 
 .header-open-sidenav {
@@ -111,7 +140,7 @@ css selector naming
     column-gap: 0.5rem;
     height: 3.25rem;
     padding: 1rem 1.25rem;
-    border-bottom: 1px solid #DBDBDB;
+    border-bottom: var(--border_1);
 }
 
 .sidenav-link::after {
@@ -127,66 +156,6 @@ css selector naming
     height: 1.25rem;
     font-size: 0;
     cursor: alias;
-}
-
-.ic-dashboard {
-    background-image: url("/public/images/icon/ic_dashboard.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.ic-user {
-    background-image: url("/public/images/icon/ic_user.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.ic-partners {
-    background-image: url("/public/images/icon/ic_shop.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.ic-plant {
-    background-image: url("/public/images/icon/ic_plant.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.ic-sample {
-    background-image: url("/public/images/icon/ic_sample.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.ic-list {
-    background-image: url("/public/images/icon/ic_list.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.ic-payment {
-    background-image: url("/public/images/icon/ic_payment.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.ic-consulting {
-    background-image: url("/public/images/icon/ic_report.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.ic-banner {
-    background-image: url("/public/images/icon/ic_advertising.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.ic-edit {
-    background-image: url("/public/images/icon/ic_edit.svg");
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .contents-wrapper {
@@ -205,9 +174,45 @@ css selector naming
     display: none;
 }
 
-.contents-title {
+.contents-title,
+.contents-title__main {
     font-size: 2.125rem;
     line-height: 1;
+}
+
+.contents-title__sub {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.tab-button {}
+
+.tab-content-wrapper {}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.show {
+    display: block;
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.login-form {
+    padding: 1rem 2rem;
+    max-width: 30rem;
+    width: 100%;
+    border-radius: var(--pixel_5);
+    box-shadow: var(--shadow);
 }
 
 @media screen and (max-width:1365px) {
@@ -220,7 +225,6 @@ css selector naming
         margin-left: 2rem;
     }
 }
-
 
 @media screen and (max-width:767px) {
 
