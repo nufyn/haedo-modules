@@ -225,6 +225,23 @@ i {
     font-size: 0;
 }
 
+.silence {
+    display: none !important;
+}
+
+.scroll-none {
+    height: 100%;
+    overflow: hidden !important;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scroll-none::-webkit-scrollbar {
+    display: none;
+}
+
 .responsive-wearable {
     display: inherit;
 }
