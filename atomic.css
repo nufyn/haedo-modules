@@ -1,10 +1,38 @@
 :root {
+
     /* 1rem = 16px; */
+
+    /* 
+        10 : 10px
+        15 : 15px
+        20 : 20px
+        25 : 25px
+        30 : 30px
+        35 : 35px
+        40 : 40px
+        45 : 45px
+        50 : 50px
+        60 : 60px
+        70 : 70px
+        80 : 80px
+        90 : 90px
+        100 : 100px
+        1 : 1rem
+        2 : 2rem
+        3 : 3rem
+        xs : 0.5em
+        sm : 0.75em
+        md : 1em
+        lg : 1.25em
+        xl : 1.5em
+    */
+
     --pixel_1: 1px;
     --pixel_2: 2px;
     --pixel_3: 3px;
     --pixel_4: 4px;
     --pixel_5: 5px;
+    --pixel_8: 8px;
     --pixel_10: 10px;
     --pixel_15: 15px;
     --pixel_20: 20px;
@@ -26,15 +54,20 @@
     --rem_4: 4rem;
     --rem_5: 5rem;
 
+    --em_md: 0em;
+    /* -8px */
     --em_xs: -0.5em;
+    /* -4px */
     --em_sm: -0.25em;
-    --em_md: +0em;
+    /* +4px */
     --em_lg: +0.25em;
+    /* +8px */
     --em_xl: +0.5em;
 
     --font_bolder: bolder;
     --font_lighter: lighter;
     --font_light: 200;
+    --font_regular: 400;
     --font_medium: 500;
     --font_bold: 600;
     --font_black: 900;
@@ -48,34 +81,41 @@
     --weight_700: 700;
     --weight_800: 800;
     --weight_900: 900;
+
+    --font_size_head_1: 34px;
+    --font_size_head_2: 30px;
+    --font_size_title_1: 26px;
+    --font_size_title_2: 24px;
+    --font_size_subtitle_1: 20px;
+    --font_size_subtitle_2: 18px;
+    --font_size_subtitle_3: 16px;
+    --font_size_subtitle_4: 14px;
+    --font_size_body_1: 16px;
+    --font_size_body_2: 14px;
+    --font_size_body_3: 13px;
+
+    --line_height_head_1: 1.4;
+    --line_height_head_2: 1.4;
+    --line_height_title_1: 1.4;
+    --line_height_title_2: 1.5;
+    --line_height_subtitle: 1.5;
+    --line_height_subtitle: 1.5;
+    --line_height_subtitle: 1.5;
+    --line_height_subtitle: 1.5;
+    --line_height_body_1: 1.8;
+    --line_height_body_2: 1.5;
+    --line_height_body_3: 1.5;
+
+    --font_size_detail: 12px;
+    --font-size_button: 16px;
+
+    --line_height_detail: 1.5;
+    --line_height_button: 1.5;
+
+    --letter_spacing_body_1: -0.25;
 }
 
-/* 
 
-
-    10 : 10px
-    15 : 15px
-    20 : 20px
-    25 : 25px
-    30 : 30px
-    35 : 35px
-    40 : 40px
-    45 : 45px
-    50 : 50px
-    60 : 60px
-    70 : 70px
-    80 : 80px
-    90 : 90px
-    100 : 100px
-    1 : 1rem
-    2 : 2rem
-    3 : 3rem
-    xs : 0.5em
-    sm : 0.75em
-    md : 1em
-    lg : 1.25em
-    xl : 1.5em
-*/
 
 /* Box Size */
 

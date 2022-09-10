@@ -1,13 +1,16 @@
 :root {
     /* Break point */
     /* 
-        Mobile: 360 x 640.
-        Mobile: 375 x 667.
-        Mobile: 360 x 720.
+        Mobile 1: 360 x 640.
+        Mobile 2: 375 x 667.
+        Mobile 3: 360 x 720.
         iPhone X: 375 x 812.
         Pixel 2: 411 x 731.
         Tablet: 768 x 1024.
         Laptop: 1366 x 768.
+        desktop 1: 1024 x 768.
+        desktop 1: 1200 x 800.
+        desktop 2: 1440 x 1080.
         High-res laptop or desktop: 1920 x 1080.
      */
     /* 서비스 특성에 맞게 변경해서 사용*/
@@ -80,12 +83,9 @@
     padding: 0;
     margin: 0;
     border: none;
-    outline: 0;
-    text-decoration: 0;
-    list-style: none;
-    cursor: default;
+    outline: none;
+    text-decoration: none;
     -webkit-tap-highlight-color: transparent;
-    -webkit-text-size-adjust: none;
 }
 
 html,
@@ -180,6 +180,8 @@ input[type=email],
 input[type=phone] {
     -webkit-appearance: none;
     cursor: text;
+    padding-top: 4px;
+    line-height: inherit;
 }
 
 button,
@@ -187,6 +189,7 @@ input[type='button'],
 input[type='submit'],
 input[type='reset'],
 input[type='file'] {
+    cursor: pointer;
     -webkit-appearance: button;
 }
 
@@ -198,9 +201,10 @@ img,
 video,
 audio {
     display: inline-block;
+    object-fit: contain;
+    font-size: 0;
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -212,6 +216,7 @@ h6 {
 
 h1 {
     display: block;
+    line-height: 1.4;
     font-weight: bolder;
 }
 
