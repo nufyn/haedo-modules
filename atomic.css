@@ -94,20 +94,22 @@
     --font_size_body_2: 14px;
     --font_size_body_3: 13px;
 
+    --font_size_detail: 12px;
+    --font-size_button: 16px;
+
+    --line_height_head: 1.4;
     --line_height_head_1: 1.4;
     --line_height_head_2: 1.4;
     --line_height_title_1: 1.4;
     --line_height_title_2: 1.5;
     --line_height_subtitle: 1.5;
-    --line_height_subtitle: 1.5;
-    --line_height_subtitle: 1.5;
-    --line_height_subtitle: 1.5;
+    --line_height_subtitle_1: 1.5;
+    --line_height_subtitle_2: 1.5;
+    --line_height_subtitle_3: 1.5;
+    --line_height_subtitle_4: 1.5;
     --line_height_body_1: 1.8;
     --line_height_body_2: 1.5;
     --line_height_body_3: 1.5;
-
-    --font_size_detail: 12px;
-    --font-size_button: 16px;
 
     --line_height_detail: 1.5;
     --line_height_button: 1.5;

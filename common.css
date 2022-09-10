@@ -230,6 +230,10 @@ i {
     font-size: 0;
 }
 
+.show {
+    display: inherit !important;
+}
+
 .silence {
     display: none !important;
 }
