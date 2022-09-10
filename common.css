@@ -248,7 +248,7 @@ i {
 }
 
 .responsive-wearable {
-    display: inherit;
+    display: none;
 }
 
 .responsive-mobile {
@@ -259,76 +259,53 @@ i {
     display: none;
 }
 
+.responsive-laptop {
+    display: none;
+}
+
 .responsive-desktop {
     display: none;
 }
 
-/* mobile  */
-@media all and (min-width: 280px) and (max-width:359px) {
+/* wearable  */
+@media all and (min-width: 280px) and (max-width: 359px) {
     .responsive-wearable {
         display: inherit;
     }
 }
 
-@media all and (min-width: 360px) {
-    .responsive-wearable {
-        display: none;
-    }
-}
-
-@media all and (min-width: 320px) and (max-width:767px) {
+/* mobile  */
+@media all and (min-width: 320px) {
     .responsive-mobile {
         display: inherit;
-    }
-
-    .responsive-tablet {
-        display: none;
-    }
-
-    .responsive-desktop {
-        display: none;
     }
 }
 
 /* mobile large & tablet */
-@media all and (min-width: 768px) and (max-width:1023px) {
+@media all and (min-width: 768px) {
     .responsive-mobile {
         display: none;
     }
 
     .responsive-tablet {
         display: inherit;
-    }
-
-    .responsive-desktop {
-        display: none;
     }
 }
 
 /* laptop */
-@media all and (min-width: 1024px) and (max-width:1365px) {
-    .responsive-mobile {
-        display: none;
-    }
-
-
-    .responsive-tablet {
-        display: inherit;
-    }
-
-    .responsive-desktop {
+@media all and (min-width: 1024px) {
+    .responsive-laptop {
         display: inherit;
     }
 }
 
 /* desktop */
-@media all and (min-width: 1366px) and (max-width:1920px) {
-    .responsive-mobile {
+@media all and (min-width: 1440px) {
+    .responsive-tablet {
         display: none;
     }
 
-
-    .responsive-tablet {
+    .responsive-laptop {
         display: none;
     }
 
