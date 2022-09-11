@@ -230,6 +230,12 @@ i {
     font-size: 0;
 }
 
+hr {
+    border-width: inherit;
+    border-style: solid;
+    border-color: var(--color_border);
+}
+
 .show {
     display: inherit !important;
 }
