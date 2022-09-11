@@ -252,68 +252,68 @@ i {
 }
 
 .responsive-wearable {
-    display: none;
+    display: none !important;
 }
 
 .responsive-mobile {
-    display: none;
+    display: none !important;
 }
 
 .responsive-tablet {
-    display: none;
+    display: none !important;
 }
 
 .responsive-laptop {
-    display: none;
+    display: none !important;
 }
 
 .responsive-desktop {
-    display: none;
+    display: none !important;
 }
 
 /* wearable  */
 @media all and (min-width: 280px) and (max-width: 359px) {
     .responsive-wearable {
-        display: inherit;
+        display: inherit !important;
     }
 }
 
 /* mobile  */
 @media all and (min-width: 320px) {
     .responsive-mobile {
-        display: inherit;
+        display: inherit !important;
     }
 }
 
 /* mobile large & tablet */
 @media all and (min-width: 768px) {
     .responsive-mobile {
-        display: none;
+        display: none !important;
     }
 
     .responsive-tablet {
-        display: inherit;
+        display: inherit !important;
     }
 }
 
 /* laptop */
 @media all and (min-width: 1024px) {
     .responsive-laptop {
-        display: inherit;
+        display: inherit !important;
     }
 }
 
 /* desktop */
 @media all and (min-width: 1440px) {
     .responsive-tablet {
-        display: none;
+        display: none !important;
     }
 
     .responsive-laptop {
-        display: none;
+        display: none !important;
     }
 
     .responsive-desktop {
-        display: inherit;
+        display: inherit !important;
     }
 }
