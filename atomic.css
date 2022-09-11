@@ -72,15 +72,15 @@
     --font_bold: 600;
     --font_black: 900;
 
-    --weight_100: 100;
-    --weight_200: 200;
-    --weight_300: 300;
-    --weight_400: 400;
-    --weight_500: 500;
-    --weight_600: 600;
-    --weight_700: 700;
-    --weight_800: 800;
-    --weight_900: 900;
+    --font_weight_100: 100;
+    --font_weight_200: 200;
+    --font_weight_300: 300;
+    --font_weight_400: 400;
+    --font_weight_500: 500;
+    --font_weight_600: 600;
+    --font_weight_700: 700;
+    --font_weight_800: 800;
+    --font_weight_900: 900;
 
     --font_size_head_1: 34px;
     --font_size_head_2: 30px;
