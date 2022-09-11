@@ -18,7 +18,7 @@ Button
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.5rem;
 }
 
 button {
@@ -39,7 +39,7 @@ button {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.5rem;
 }
 
 .icon-button i {}
