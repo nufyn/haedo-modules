@@ -550,6 +550,14 @@
     margin-bottom: calc(var(--rem_4) + var(--em_xl));
 }
 
+.margin-bottom__10-pixel {
+    margin-bottom: var(--pixel_10);
+}
+
+.margin-bottom__20-pixel {
+    margin-bottom: var(--pixel_20);
+}
+
 /* border */
 
 /* all(top, right, bottom, left) border */
