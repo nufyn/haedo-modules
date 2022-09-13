@@ -1498,8 +1498,10 @@
 
 /* Extra */
 
+
+.text-overflow__ellipsis,
 .ellipsis {
-    display: inline-block;
+    display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
