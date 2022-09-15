@@ -422,8 +422,7 @@
     font-weight: 500;
 }
 
-.font-weight__600,
-.font-weight__bold {
+.font-weight__600 {
     font-weight: 600;
 }
 
@@ -438,6 +437,14 @@
 .font-weight__900,
 .font-weight__black {
     font-weight: 900;
+}
+
+.font-weight__normal {
+    font-weight: normal;
+}
+
+.font-weight__bold {
+    font-weight: bold;
 }
 
 .font-weight__bolder {
