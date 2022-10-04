@@ -135,26 +135,14 @@ button {
     line-height: 1.5;
 }
 
-p,
-button {
-    margin: 0;
-    padding: 0;
-}
-
 a {
-    margin: 0;
-    padding: 0;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:active,
 a:hover {
     color: inherit;
-}
-
-button,
-a {
-    cursor: pointer;
 }
 
 button[type=disabled],
@@ -222,11 +210,6 @@ h1 {
 table {
     border-collapse: collapse;
     border-spacing: 0
-}
-
-i {
-    display: inline-block;
-    font-size: 0;
 }
 
 hr {

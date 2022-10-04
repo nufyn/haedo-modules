@@ -1,0 +1,33 @@
+.button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.button-container.h-left {
+    justify-content: flex-start;
+}
+
+.button-container.h-center {
+    justify-content: center;
+}
+
+.button-container.h-right {
+    justify-content: flex-end;
+}
+
+.button-container.v-top {
+    align-items: flex-start;
+}
+
+.button-container.v-center {
+    align-items: center;
+}
+
+.button-container.v-bottom {
+    align-items: flex-end;
+}

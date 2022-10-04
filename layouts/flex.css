@@ -75,46 +75,309 @@
     align-items: flex-end;
 }
 
-/* flex gap */
+/* Gap */
 
-.gap-v.xs {
-    row-gap: 0.5rem;
+/* all(horizontal + vertical) gap */
+
+.gap__1 {
+    gap: var(--rem_1);
 }
 
-.gap-v.sm {
-    row-gap: 0.75rem;
+.gap__2 {
+    gap: var(--rem_2);
 }
 
-.gap-v.md {
-    row-gap: 1rem;
+.gap__3 {
+    gap: var(--rem_3);
 }
 
-.gap-v.lg {
-    row-gap: 1.25rem;
+.gap__4 {
+    gap: var(--rem_4);
 }
 
-.gap-v.xl {
-    row-gap: 1.5rem;
+.gap__1.extra-small {
+    gap: calc(var(--rem_1) + var(--rem_xs));
 }
 
-.gap-h.xs {
-    column-gap: 0.25rem;
+.gap__1.small {
+    gap: calc(var(--rem_1) + var(--rem_sm));
 }
 
-.gap-h.sm {
-    column-gap: 0.5rem;
+.gap__1.medium {
+    gap: calc(var(--rem_1) + var(--rem_md));
 }
 
-.gap-h.md {
-    column-gap: 1rem;
+.gap__1.large {
+    gap: calc(var(--rem_1) + var(--rem_lg));
 }
 
-.gap-h.lg {
-    column-gap: 1.25rem;
+.gap__1.extra-large {
+    gap: calc(var(--rem_1) + var(--rem_xl));
 }
 
-.gap-h.xl {
-    column-gap: 1.5rem;
+.gap__2.extra-small {
+    gap: calc(2rem + var(--rem_xs));
+}
+
+.gap__2.small {
+    gap: calc(2rem + var(--rem_sm));
+}
+
+.gap__2.medium {
+    gap: calc(2rem + var(--rem_md));
+}
+
+.gap__2.large {
+    gap: calc(2rem + var(--rem_lg));
+}
+
+.gap__2.extra-large {
+    gap: calc(2rem + var(--rem_xl));
+}
+
+.gap__3.extra-small {
+    gap: calc(3rem + var(--rem_xs));
+}
+
+.gap__3.small {
+    gap: calc(3rem + var(--rem_sm));
+}
+
+.gap__3.medium {
+    gap: calc(3rem + var(--rem_md));
+}
+
+.gap__3.large {
+    gap: calc(3rem + var(--rem_lg));
+}
+
+.gap__3.extra-large {
+    gap: calc(3rem + var(--rem_xl));
+}
+
+/* column(main-axis) gap */
+
+.gap-col__1.extra-small {
+    column-gap: calc(var(--rem_1) + var(--rem_xs));
+}
+
+.gap-col__1.small {
+    column-gap: calc(var(--rem_1) + var(--rem_sm));
+}
+
+.gap-col__1.medium {
+    column-gap: calc(var(--rem_1) + var(--rem_md));
+}
+
+.gap-col__1.large {
+    column-gap: calc(var(--rem_1) + var(--rem_lg));
+}
+
+.gap-col__1.extra-large {
+    column-gap: calc(var(--rem_1) + var(--rem_xl));
+}
+
+.gap-col__2.extra-small {
+    column-gap: calc(var(--rem_2) + var(--rem_xs));
+}
+
+.gap-col__2.small {
+    column-gap: calc(var(--rem_2) + var(--rem_sm));
+}
+
+.gap-col__2.medium {
+    column-gap: calc(var(--rem_2) + var(--rem_md));
+}
+
+.gap-col__2.large {
+    column-gap: calc(var(--rem_2) + var(--rem_lg));
+}
+
+.gap-col__2.extra-large {
+    column-gap: calc(var(--rem_2) + var(--rem_xl));
+}
+
+.gap-col__3.extra-small {
+    column-gap: calc(var(--rem_3) + var(--rem_xs));
+}
+
+.gap-col__3.small {
+    column-gap: calc(var(--rem_3) + var(--rem_sm));
+}
+
+.gap-col__3.medium {
+    column-gap: calc(var(--rem_3) + var(--rem_md));
+}
+
+.gap-col__3.large {
+    column-gap: calc(var(--rem_3) + var(--rem_lg));
+}
+
+.gap-col__3.extra-large {
+    column-gap: calc(var(--rem_3) + var(--rem_xl));
+}
+
+/* row(cross-axis) gap */
+
+.gap-row__1.extra-small {
+    row-gap: calc(var(--rem_1) + var(--rem_xs));
+}
+
+.gap-row__1.small {
+    row-gap: calc(var(--rem_1) + var(--rem_sm));
+}
+
+.gap-row__1.medium {
+    row-gap: calc(var(--rem_1) + var(--rem_md));
+}
+
+.gap-row__1.large {
+    row-gap: calc(var(--rem_1) + var(--rem_lg));
+}
+
+.gap-row__1.extra-large {
+    row-gap: calc(var(--rem_1) + var(--rem_xl));
+}
+
+.gap-row__2.extra-small {
+    row-gap: calc(var(--rem_2) + var(--rem_xs));
+}
+
+.gap-row__2.small {
+    row-gap: calc(var(--rem_2) + var(--rem_sm));
+}
+
+.gap-row__2.medium {
+    row-gap: calc(var(--rem_2) + var(--rem_md));
+}
+
+.gap-row__2.large {
+    row-gap: calc(var(--rem_2) + var(--rem_lg));
+}
+
+.gap-row__2.extra-large {
+    row-gap: calc(var(--rem_2) + var(--rem_xl));
+}
+
+.gap-row__3.extra-small {
+    row-gap: calc(var(--rem_3) + var(--rem_xs));
+}
+
+.gap-row__3.small {
+    row-gap: calc(var(--rem_3) + var(--rem_sm));
+}
+
+.gap-row__3.medium {
+    row-gap: calc(var(--rem_3) + var(--rem_md));
+}
+
+.gap-row__3.large {
+    row-gap: calc(var(--rem_3) + var(--rem_lg));
+}
+
+.gap-row__3.extra-large {
+    row-gap: calc(var(--rem_3) + var(--rem_xl));
+}
+
+.gap-col__1-pixel {
+    column-gap: var(--pixel_1);
+}
+
+.gap-col__2-pixel {
+    column-gap: var(--pixel_2);
+}
+
+.gap-col__3-pixel {
+    column-gap: var(--pixel_3);
+}
+
+.gap-col__4-pixel {
+    column-gap: var(--pixel_4);
+}
+
+.gap-col__5-pixel {
+    column-gap: var(--pixel_5);
+}
+
+.gap-row__1-pixel {
+    row-gap: var(--pixel_1);
+}
+
+.gap-row__2-pixel {
+    row-gap: var(--pixel_2);
+}
+
+.gap-row__3-pixel {
+    row-gap: var(--pixel_3);
+}
+
+.gap-row__4-pixel {
+    row-gap: var(--pixel_4);
+}
+
+.gap-row__5-pixel {
+    row-gap: var(--pixel_5);
+}
+
+.gap__1-pixel {
+    gap: var(--pixel_1);
+}
+
+.gap__2-pixel {
+    gap: var(--pixel_2);
+}
+
+.gap__3-pixel {
+    gap: var(--pixel_3);
+}
+
+.gap__4-pixel {
+    gap: var(--pixel_4);
+}
+
+.gap__5-pixel {
+    gap: var(--pixel_5);
+}
+
+/* order */
+.order__1 {
+    order: 1;
+}
+
+.order__2 {
+    order: 2;
+}
+
+.order__3 {
+    order: 3;
+}
+
+.order__4 {
+    order: 4;
+}
+
+.order__5 {
+    order: 5;
+}
+
+.order__6 {
+    order: 6;
+}
+
+.order__7 {
+    order: 7;
+}
+
+.order__8 {
+    order: 8;
+}
+
+.order__9 {
+    order: 9;
+}
+
+.order__10 {
+    order: 10;
 }
 
 /* flex container -- end */
@@ -122,17 +385,24 @@
 
 /* 
   flex 아이템의 크기는 1을 100%로 한다.
-  flex-grow는 아이템이 flex-basis의 값보다 커질 수 있는지를 결정하는 속성. default: 0;
-    *** flex-grow에 들어가는 숫자의 의미는, 아이템들의 flex-basis를 제외한 여백 부분을 flex-grow에 지정된 숫자의 비율
-  flex-basis는 Flex 아이템의 기본 크기(flex-direction이 row일 때는 너비, column일 때는 높이). default: auto
-    *** 순수한 아이템의 너비이므로, width의 영향을 받는다.
-  flex-shrink는 아이템이 flex-basis의 값보다 커질 수 있는지를 결정하는 속성.
-    *** 
+  
+    flex-grow는 아이템이 flex-basis의 값보다 커질 수 있는지를 결정하는 속성. default: 0; // 자동으로 채워지지 않음
+        *** flex-grow에 들어가는 숫자의 의미는, 아이템들의 flex-basis를 제외한 '여백' 부분을 flex-grow에 지정된 숫자의 비율
+  
+    flex-basis는 Flex 아이템의 기본 크기(flex-direction이 row일 때는 너비, column일 때는 높이). default: auto
+        *** 순수한 아이템의 너비이므로, width의 영향을 받는다.
+  
+    flex-shrink는 아이템이 flex-basis의 값보다 커질 수 있는지를 결정하는 속성. default: 1; // 자동으로 줄어듦
+        *** flex-shrink에 들어가는 숫자의 의미는, 아이템들이 컨테이너 너비를 지나쳤을때 flex-basis보다 작아질 수 있는 비율이다.
+        *** flex-wrap: wrap; 이며 적용되지 않는다.
   */
+
 .flex-1 {
+    flex: 1;
+}
+
+.flex-grow__1 {
     flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0;
 }
 
 .flex-auto {
@@ -167,7 +437,11 @@
 
 /* flex items -- end */
 
-
+.flex-item__2 {
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
 
 /* flex responsive */
 
