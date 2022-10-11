@@ -213,9 +213,11 @@ table {
 }
 
 hr {
-    border-width: inherit;
-    border-style: solid;
-    border-color: var(--color_border);
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-color: var(--color_border);
 }
 
 .show {
