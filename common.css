@@ -71,6 +71,16 @@
     --border_primary_1: 1px solid var(--color_primary);
     --border_primary_2: 2px solid var(--color_primary);
     --border_primary_3: 3px solid var(--color_primary);
+    --border_danger_1: 1px solid var(--color_danger);
+    --border_danger_2: 2px solid var(--color_danger);
+    --border_danger_3: 3px solid var(--color_danger);
+    --border_success_1: 1px solid var(--color_success);
+    --border_success_2: 2px solid var(--color_success);
+    --border_success_3: 3px solid var(--color_success);
+    --border_warning_1: 1px solid var(--color_warning);
+    --border_warning_2: 2px solid var(--color_warning);
+    --border_warning_3: 3px solid var(--color_warning);
+
 
     --shadow: 0 3px 6px rgba(13, 13, 13, 0.16);
 }
